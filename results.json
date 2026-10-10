@@ -1,0 +1,219 @@
+{
+  "field_multiplications": 65536,
+  "field_inverses": 255,
+  "MDS": {
+    "minors": 12869,
+    "singular": 0,
+    "branch_number": 9
+  },
+  "source_sha256": "c474509de291e05243dc97e10adf6fffd53f8b9fa6f6f05139a4afaf7a3c3714",
+  "zero_vector": "bf073ec1c325616543acc765669c100cf98bd32c2e25e5e20d9b144e8186f68f655efe54969e952b3a16f95e7e29efdd73a6221b14b5fdd67f988a45b73a373a",
+  "document_vectors": {
+    "TEST_VECTORS.md": true,
+    "PREPUBLICATION_REPORT.md": true
+  },
+  "independent_reference_and_roundtrips": 256,
+  "batch_roundtrips": 4096,
+  "ciphertext_unique": 4096,
+  "sbox": {
+    "permutation": true,
+    "differential_uniformity": 4,
+    "max_nontrivial_walsh": 32
+  },
+  "plaintext_avalanche": {
+    "samples": 4096,
+    "mean_changed_bits": 256.240234375,
+    "std": 11.45686127425694,
+    "min": 214,
+    "max": 301,
+    "max_output_bit_bias": 0.0244140625,
+    "max_pair_correlation": 0.07435195924125845
+  },
+  "key_avalanche": {
+    "samples": 4096,
+    "mean_changed_bits": 255.97265625,
+    "std": 11.380224348649104,
+    "min": 218,
+    "max": 299,
+    "max_output_bit_bias": 0.026611328125,
+    "max_pair_correlation": 0.08145612706094112
+  },
+  "round_key_avalanche": {
+    "samples": 126976,
+    "mean": 255.94935263356854,
+    "min": 209,
+    "max": 302
+  },
+  "balance": {
+    "samples": 4096,
+    "mean_one_fraction": 0.5000934600830078,
+    "max_bit_bias": 0.0234375
+  },
+  "differentials": [
+    {
+      "byte": 0,
+      "samples": 4096,
+      "unique_differences": 4096,
+      "mean_hd": 256.355712890625
+    },
+    {
+      "byte": 7,
+      "samples": 4096,
+      "unique_differences": 4096,
+      "mean_hd": 256.30126953125
+    },
+    {
+      "byte": 31,
+      "samples": 4096,
+      "unique_differences": 4096,
+      "mean_hd": 256.21142578125
+    },
+    {
+      "byte": 63,
+      "samples": 4096,
+      "unique_differences": 4096,
+      "mean_hd": 255.697021484375
+    }
+  ],
+  "integrals": {
+    "1": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "2": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "3": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "4": [
+      285,
+      242,
+      236,
+      263
+    ],
+    "5": [
+      248,
+      265,
+      256,
+      261
+    ],
+    "6": [
+      284,
+      224,
+      268,
+      238
+    ]
+  },
+  "input_validation": [
+    {
+      "argument": "block",
+      "length": 0,
+      "result": "ValueError:block must contain exactly 64 bytes"
+    },
+    {
+      "argument": "key",
+      "length": 0,
+      "result": "ValueError:key must contain exactly 64 bytes"
+    },
+    {
+      "argument": "block",
+      "length": 1,
+      "result": "ValueError:block must contain exactly 64 bytes"
+    },
+    {
+      "argument": "key",
+      "length": 1,
+      "result": "ValueError:key must contain exactly 64 bytes"
+    },
+    {
+      "argument": "block",
+      "length": 63,
+      "result": "ValueError:block must contain exactly 64 bytes"
+    },
+    {
+      "argument": "key",
+      "length": 63,
+      "result": "ValueError:key must contain exactly 64 bytes"
+    },
+    {
+      "argument": "block",
+      "length": 64,
+      "result": "accepted:64"
+    },
+    {
+      "argument": "key",
+      "length": 64,
+      "result": "accepted:64"
+    },
+    {
+      "argument": "block",
+      "length": 65,
+      "result": "ValueError:block must contain exactly 64 bytes"
+    },
+    {
+      "argument": "key",
+      "length": 65,
+      "result": "ValueError:key must contain exactly 64 bytes"
+    },
+    {
+      "argument": "block",
+      "length": 128,
+      "result": "ValueError:block must contain exactly 64 bytes"
+    },
+    {
+      "argument": "key",
+      "length": 128,
+      "result": "ValueError:key must contain exactly 64 bytes"
+    }
+  ],
+  "truncation_collision": false,
+  "cli": [
+    {
+      "args": [],
+      "returncode": 0,
+      "expected": 0
+    },
+    {
+      "args": [
+        "--avalanche",
+        "--bit",
+        "511"
+      ],
+      "returncode": 0,
+      "expected": 0
+    },
+    {
+      "args": [
+        "--avalanche",
+        "--bit",
+        "512"
+      ],
+      "returncode": 2,
+      "expected": 2
+    },
+    {
+      "args": [
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      ],
+      "returncode": 2,
+      "expected": 2
+    },
+    {
+      "args": [
+        "\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4\u00e4"
+      ],
+      "returncode": 2,
+      "expected": 2
+    }
+  ],
+  "elapsed_seconds": 67.51238250732422
+}

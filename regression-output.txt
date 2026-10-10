@@ -1,0 +1,15 @@
+test_buffers_and_nonmutation (__main__.Regression.test_buffers_and_nonmutation) ... ok
+test_cli_secret_defaults (__main__.Regression.test_cli_secret_defaults) ... ok
+test_decrypt_arbitrary_ciphertext (__main__.Regression.test_decrypt_arbitrary_ciphertext) ... ok
+test_input_lengths (__main__.Regression.test_input_lengths) ... ok
+test_negative_exponent (__main__.Regression.test_negative_exponent) ... ok
+test_published_vectors_and_hash (__main__.Regression.test_published_vectors_and_hash) ... ok
+test_round_numbers (__main__.Regression.test_round_numbers) ... ok
+test_structured_roundtrips (__main__.Regression.test_structured_roundtrips) ... ok
+test_types (__main__.Regression.test_types) ... ok
+test_zero_vector (__main__.Regression.test_zero_vector) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 5.766s
+
+OK

@@ -1,0 +1,3 @@
+# Cipher and regression tests: Python standard library only.
+# Larger audit:
+numpy>=2.0,<3
